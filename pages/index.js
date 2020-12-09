@@ -1,16 +1,23 @@
-import Axios from "axios";
-import styled from "styled-components";
-import { endpoint } from "../constants";
+import { getPlayerSummaryByVanityUrl } from "../utils/getPlayerSummaryByVanityUrl";
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-export default function Home() {
-  Axios.get(`${endpoint}&vanityurl=nortybone`).then(
-    (res) => res.data.response.steamid
+export default function Home({ data }) {
+  return (
+    <>
+      {Object.keys(data).map((item) => (
+        <p key={item}>
+          {item} {data[item]}
+        </p>
+      ))}
+    </>
   );
-
-  return <Title>My page</Title>;
 }
+
+export const getStaticProps = async () => {
+  const data = await getPlayerSummaryByVanityUrl("nortybone");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
