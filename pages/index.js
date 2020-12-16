@@ -1,25 +1,24 @@
 import { getPlayerSummaryByVanityUrl } from "../utils/getPlayerSummaryByVanityUrl";
-import Image from "next/image"
+import Image from "next/image";
+import { Wrapper } from "../components/Wrapper";
+import { Avatar } from "../components/Avatar";
+import { Heading } from "../components/Heading";
 
 export default function Home({ data }) {
+  console.table(data);
   return (
-    <>
-      {Object.keys(data).map((item) =>
-        item.includes("avatar") && item !== "avatarhash" ? (
-          <Image
-            key={item}
-            src={data[item]}
-            width={256}
-            height={256}
-            alt="avatar"
-          />
-        ) : (
-          <p key={item}>
-            {item} {data[item]}
-          </p>
-        )
-      )}
-    </>
+    <Wrapper>
+      <Heading>{data.personaname}</Heading>
+      <p>{data.realname}</p>
+      <Avatar>
+        <Image
+          src={data.avatarfull}
+          width={256}
+          height={256}
+          alt="avatar"
+        />
+      </Avatar>
+    </Wrapper>
   );
 }
 
