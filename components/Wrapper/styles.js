@@ -5,4 +5,5 @@ export const WrapperCSS = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 4rem;
 `;
