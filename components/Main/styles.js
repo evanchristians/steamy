@@ -5,4 +5,5 @@ export const MainCSS = styled.main`
   flex-direction: column;
   background: ${(props) => props.theme.colors.black_a};
   color: ${(props) => props.theme.colors.white};
+  min-height: 100vh;
 `;

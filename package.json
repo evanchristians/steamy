@@ -11,6 +11,7 @@
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "next": "latest",
+    "next-google-fonts": "^1.2.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",

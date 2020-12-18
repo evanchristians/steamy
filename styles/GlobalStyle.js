@@ -8,17 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:
-      ---apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      'Open Sans',
-      'Helvetica Neue',
-      sans-serif
+    font-family: 'Nanum Gothic';
   }
 `;
 
@@ -29,5 +19,6 @@ export const theme = {
     black_b: "#1B1B1B",
     grey: "#6B7585",
     white: "#FBFBFB",
+    pink: "#FB2B76",
   },
 };
