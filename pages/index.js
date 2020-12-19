@@ -5,11 +5,13 @@ import { Avatar } from "../components/Avatar";
 import { Heading } from "../components/Heading";
 import { Text } from "../components/Text";
 import { Block } from "../components/Block";
+import { SideBar } from "../components/SideBar";
 
 export default function Home({ data }) {
   // console.table(data);
   return (
     <Wrapper>
+      <SideBar />
       <Block>
         <Avatar>
           <Image src={data.avatarfull} width={256} height={256} alt="avatar" />

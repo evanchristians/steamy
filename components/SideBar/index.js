@@ -1,5 +1,12 @@
-import { SideBarCSS } from "./styles";
+import { Block } from "../Block";
+import { SideBarContainerCSS, SideBarCSS } from "./styles";
 
 export const SideBar = ({ children }) => {
-  return <SideBarCSS>{children}</SideBarCSS>;
+  return (
+    <SideBarContainerCSS>
+      <Block>
+        <SideBarCSS>{children}</SideBarCSS>
+      </Block>
+    </SideBarContainerCSS>
+  );
 };
